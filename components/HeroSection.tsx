@@ -20,10 +20,10 @@ const HeroSection = () => {
         className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center md:text-left"
       >
         <h1 className="text-5xl md:text-7xl font-extrabold mb-4 tracking-tight">
-          Your Future Starts Here.
+          Your Future Starts Here
         </h1>
         <p className="text-xl md:text-2xl mb-10 opacity-90 max-w-2xl font-medium">
-          Start your journey to German fluency today with interactive lessons, personalized vocabulary, and AI conversations.
+          Start your journey to German fluency today with interactive lessons, personalized vocabulary,Exams(URT and TOC).
         </p>
         <div className="flex justify-center md:justify-start space-x-4">
           <Link href="/signup">

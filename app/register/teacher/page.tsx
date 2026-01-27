@@ -1,66 +1,16 @@
-// "use client";
-
-// import { Button } from "@/components/ui/button";
-// import { Input } from "@/components/ui/input";
-// import { Label } from "@/components/ui/label";
-// import Link from "next/link";
-
-// export default function TeacherRegister() {
-//   return (
-//     <div className="flex min-h-screen items-center justify-center bg-gray-50 dark:bg-gray-900 p-6 font-sans">
-//       <div className="w-full max-w-lg bg-white dark:bg-zinc-900 p-8 rounded-2xl shadow-2xl border border-purple-200 dark:border-zinc-700">
-        
-//         <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
-//           Teacher Registration
-//         </h1>
-
-//         <form className="space-y-5">
-//           <div>
-//             <Label className="text-gray-700 dark:text-gray-300">Full Name</Label>
-//             <Input type="text" placeholder="Sarah Müller" required />
-//           </div>
-
-//           <div>
-//             <Label className="text-gray-700 dark:text-gray-300">Email</Label>
-//             <Input type="email" placeholder="teacher@mail.com" required />
-//           </div>
-
-//           <div>
-//             <Label className="text-gray-700 dark:text-gray-300">Password</Label>
-//             <Input type="password" placeholder="••••••••" required />
-//           </div>
-
-//           <div>
-//             <Label className="text-gray-700 dark:text-gray-300">School / Institution (optional)</Label>
-//             <Input type="text" placeholder="Goethe Institut, etc..." />
-//           </div>
-
-//           <Button className="w-full text-lg py-5" type="submit">
-//             Create Teacher Account
-//           </Button>
-//         </form>
-
-//         <div className="mt-6 text-sm text-center text-gray-500 dark:text-gray-400">
-//           Already have an account?{" "}
-//           <Link href="/login" className="text-blue-600 hover:underline">Login</Link>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
 "use client";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import Link from "next/link";
-// استيراد useFormState للتعامل مع استجابة السيرفر (الأخطاء)
+
 import { useActionState  } from "react";
 import { useFormState, useFormStatus } from "react-dom";
 import { Loader2, AlertCircle, Briefcase, UserPlus } from "lucide-react";
-import { teacherSignUp } from "./actions"; // تأكد من وجود ملف actions.ts واستيراد الدالة
+import { teacherSignUp } from "./actions"; 
 
-// 1. مكون زر الإرسال (مفصول ليتمكن من استخدام useFormStatus)
+
 function SubmitButton() {
   const { pending } = useFormStatus();
 
@@ -85,13 +35,13 @@ function SubmitButton() {
   );
 }
 
-// الحالة الأولية (لتجنب أخطاء null)
+
 const initialState = {
   error: "",
 };
 
 export default function TeacherRegisterPage() {
-  // 2. ربط الأكشن مع الحالة
+
   const [state, formAction] = useActionState(teacherSignUp, initialState);
 
   return (
@@ -106,7 +56,7 @@ export default function TeacherRegisterPage() {
         </CardHeader>
         <CardContent>
           
-          {/* عرض رسالة الخطأ إذا وجدت */}
+  
           {state?.error && (
             <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg flex items-center text-red-700 animate-in fade-in slide-in-from-top-2">
               <AlertCircle className="w-5 h-5 mr-2 flex-shrink-0" />
@@ -114,7 +64,7 @@ export default function TeacherRegisterPage() {
             </div>
           )}
 
-          {/* 3. النموذج مربوط بـ dispatch */}
+
           <form action={formAction} className="grid gap-4">
             
             <div className="grid grid-cols-2 gap-4">

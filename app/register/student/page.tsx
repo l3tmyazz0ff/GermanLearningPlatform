@@ -60,7 +60,7 @@ export default function StudentRegister() {
           </p>
         </div>
 
-        {/* عرض رسالة الخطأ */}
+
         {state?.error && (
           <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg flex items-center text-red-700 animate-in fade-in slide-in-from-top-2">
             <AlertCircle className="w-5 h-5 mr-2 flex-shrink-0" />

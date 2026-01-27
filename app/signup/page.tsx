@@ -41,22 +41,29 @@ const AccountOption = ({ title, description, icon: Icon, type }: AccountOptionPr
 );
 
 export default function SignupPage() {
-  return (
-    <div className="flex min-h-screen flex-col items-center justify-center bg-gray-50 dark:bg-gray-900 font-sans p-6">
+ return (
+    // الخلفية العامة للصفحة (غمقتها سنة بسيطة عشان المربع يبان)
+    <div className="flex min-h-screen flex-col items-center justify-center bg-gray-100 dark:bg-gray-900 font-sans p-6">
 
-      <div className="w-full max-w-lg p-8 bg-white dark:bg-zinc-900 rounded-2xl shadow-2xl 
-                      border border-blue-100 dark:border-zinc-700 text-center">
+      {/* المربع نفسه */}
+      {/* التغييرات هنا:
+          1. max-w-2xl: خليته أعرض
+          2. p-12: زودت المساحة الداخلية
+          3. bg-white/80 backdrop-blur-md: خليته شفاف بسيط (مودرن)
+      */}
+      <div className="w-full max-w-2xl p-12 bg-white/90 dark:bg-zinc-900/90 rounded-3xl shadow-2xl 
+                      border border-gray-200 dark:border-zinc-700 text-center backdrop-blur-sm">
         
-        <h1 className="text-4xl font-extrabold text-gray-900 dark:text-white mb-3">
+        <h1 className="text-5xl font-extrabold text-gray-900 dark:text-white mb-4 tracking-tight">
           Let's get started!
         </h1>
 
-        <p className="text-lg text-gray-600 dark:text-gray-400 mb-10">
+        <p className="text-xl text-gray-600 dark:text-gray-400 mb-12">
           Welcome to Deutsch Lernen! Please select your account type to continue.
         </p>
 
-        {/* Options */}
-        <div className="grid gap-6">
+        {/* Options Grid - خليتها صفين كبار ومريحين */}
+        <div className="grid gap-6 md:grid-cols-1">
           <AccountOption 
             title="Student Learner" 
             description="I want to learn German, track my progress, and use the AI tools." 
@@ -72,9 +79,9 @@ export default function SignupPage() {
           />
         </div>
 
-        <div className="text-center text-sm text-gray-500 dark:text-gray-400 mt-8">
+        <div className="text-center text-sm text-gray-500 dark:text-gray-400 mt-10">
           Already have an account?{" "}
-          <Link href="/login" className="text-blue-600 hover:underline transition-colors">
+          <Link href="/login" className="text-blue-600 font-semibold hover:underline transition-colors">
             Go to the login page.
           </Link>
         </div>

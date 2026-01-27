@@ -14,15 +14,15 @@ const ContactUsSection = () => (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div className="flex flex-col justify-center space-y-6">
             <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-              Got a question? Need help? We're always here for you! Send us a message anytime and we'll get back to you ASAP.
+              Got a question?... Need help? We're always here for you! Send us a message anytime and we'll get back to you ASAP.
             </p>
             <div className="space-y-2">
               <h3 className="text-2xl font-semibold text-gray-900 dark:text-white">Email</h3>
-              <p className="text-gray-700 dark:text-gray-300">support@german-platform.com</p>
+              <p className="text-gray-700 dark:text-gray-300">support@germanplatform.com</p>
             </div>
             <div className="space-y-2">
               <h3 className="text-2xl font-semibold text-gray-900 dark:text-white">Phone</h3>
-              <p className="text-gray-700 dark:text-gray-300">+20 111 234 5678</p>
+              <p className="text-gray-700 dark:text-gray-300">+20 10121416</p>
             </div>
           </div>
           <form className="bg-white dark:bg-gray-900 p-8 shadow-xl rounded-xl space-y-6 border border-gray-200 dark:border-gray-700">
